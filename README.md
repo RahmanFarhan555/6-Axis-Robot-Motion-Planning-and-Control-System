@@ -1,6 +1,6 @@
 # 6‑Axis Robot Control (Dockerized)
 
-This repository implements a small 6‑axis robot arm control demo with:
+This repository implements a 6‑axis robot arm control demo with:
 
 * A Python backend that stores joint state, enforces joint limits, generates smooth motions, and performs collision‑checked planning.
 * A React/TypeScript frontend that visualizes a UR5 URDF and provides a simple control pad.
