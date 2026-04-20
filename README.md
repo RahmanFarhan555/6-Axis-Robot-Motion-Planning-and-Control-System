@@ -140,7 +140,7 @@ docker compose up -d --build
 
 * Frontend can be pointed at a different backend by setting `VITE\_API\_BASE` at build time.
 
-## Decisions and assumptions (for submission)
+## Decisions and assumptions 
 
 * **FastAPI + WebSocket**: simple JSON control APIs plus push-based state updates.
 * **UR5 URDF visualization**: realistic 6-axis kinematics with clear joint motion.
