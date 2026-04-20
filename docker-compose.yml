@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    environment:
+      # If you want the frontend to call backend through your host:
+      # VITE_API_BASE is baked at build time for Vite; for simplicity we use same-origin
+      # and keep backend on 8000. In docker, accessing host is different.
+      # Easiest: expose backend port and set API_BASE to http://localhost:8000 during local use.
+      - NGINX_ENTRYPOINT_QUIET_LOGS=1
+    depends_on:
+      - backend
